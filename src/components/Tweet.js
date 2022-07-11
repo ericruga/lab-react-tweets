@@ -1,24 +1,23 @@
-
 function Tweet(props) {
   return (
     <div className="tweet">
-     <p>{props.image}</p>
-      
+      <img
+        src={props.tweet.user.image}
+        className="profile"
+        alt="profile"
+      />
 
       <div className="body">
         <div className="top">
           <span className="user">
-          <p>{props.name}</p>
-          <p>{props.handle}</p>
+            <span className="name">{props.tweet.user.name}</span>
+            <span className="handle">{props.tweet.user.handle}</span>
           </span>
 
-          <span className="timestamp"><p>{props.timestamp}</p></span>
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
-
-        <p className="message">
-        <p>{props.message}</p>
-        </p>
+        <p className="message">{props.tweet.message}</p>
 
         <div className="actions">
           {/* Font Awesome icons */}
