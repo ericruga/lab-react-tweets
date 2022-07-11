@@ -1,8 +1,8 @@
-const User = (props) => {
+const User = ({userData, userHandle}) => {
     return (
          <span className="user">
-             <span className="name">{props.name}</span>
-             <span className="handle">{props.handle}</span>
+             <span className="name">{userData}</span>
+             <span className="handle">{userHandle}</span>
          </span>
     )
 }
